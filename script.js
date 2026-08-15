@@ -3,6 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!button) return;
   button.addEventListener("click", (event) => {
     event.preventDefault();
-    alert("無料版の登録ページは準備中です。公開時にここへ登録URLを接続します。");
+    window.location.href = "https://app.farmpro-app.jp/";
   });
 });
