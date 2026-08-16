@@ -1,8 +1,11 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const button = document.getElementById("startButton");
-  if (!button) return;
-  button.addEventListener("click", (event) => {
-    event.preventDefault();
-    window.location.href = "https://app.farmpro-app.jp/";
+  const freeStartUrl = "https://app.farmpro-app.jp/register";
+  const buttons = document.querySelectorAll('a[href="#start"], #startButton');
+
+  buttons.forEach((button) => {
+    button.addEventListener("click", (event) => {
+      event.preventDefault();
+      window.location.href = freeStartUrl;
+    });
   });
 });
