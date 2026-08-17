@@ -1,4 +1,3 @@
-
 :root{
   --green:#2f7d32; --green-dark:#1f5d24; --green-soft:#eef7ef;
   --text:#1f2933; --muted:#667085; --line:#d9e2dc; --bg:#fff;
@@ -33,8 +32,13 @@ a{text-decoration:none;color:inherit}
 .hero-lead{font-size:1.15rem;color:#4e5a53;margin:24px 0 28px}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
 .microcopy{font-size:.9rem;color:var(--muted);margin-top:14px}
-.phone-frame{background:white;border:1px solid #e3eae5;border-radius:28px;padding:12px;box-shadow:var(--shadow)}
-.phone-frame img{border-radius:18px}
+.hero-visual{position:relative;min-height:430px;display:flex;align-items:center;justify-content:center;padding:22px 28px 34px 8px}
+.screen-backdrop{width:92%;background:white;border:1px solid #e3eae5;border-radius:28px;padding:12px;box-shadow:0 18px 42px rgba(0,0,0,.10);transform:translate(-2%, -2%)}
+.screen-backdrop img{border-radius:18px}
+.app-device{position:absolute;right:0;bottom:0;width:38%;min-width:150px;max-width:210px;background:#17201a;border:6px solid #17201a;border-radius:30px;box-shadow:0 20px 44px rgba(0,0,0,.22);overflow:hidden;transform:rotate(1.5deg)}
+.app-device-bar{width:42%;height:6px;border-radius:999px;background:#4e5a53;margin:9px auto 7px}
+.app-device-screen{background:white;border-radius:20px;overflow:hidden;aspect-ratio:9/18.5}
+.app-device-screen img{height:100%;width:100%;object-fit:cover;object-position:50% 10%;transform:scale(1.75);transform-origin:50% 10%}
 .section{padding:82px 0}
 .section-soft{background:var(--green-soft)}
 .section-dark{background:var(--dark);color:white}
@@ -84,6 +88,7 @@ details p{color:#5a665e;margin-bottom:0}
   .hero{padding-top:56px}
   .hero-grid,.split,.pricing-grid,.cards.three{grid-template-columns:1fr}
   .hero-grid{gap:34px}.reverse{direction:ltr}.price-card.featured{transform:none}
+  .hero-visual{min-height:390px;max-width:620px;margin:0 auto;width:100%}
 }
 @media (max-width:560px){
   .container{width:min(100% - 24px,1120px)}
@@ -93,6 +98,12 @@ details p{color:#5a665e;margin-bottom:0}
   .hero-lead{font-size:1rem}
   .hero-actions{flex-direction:column}
   .hero-actions .btn{width:100%}
+  .hero-visual{min-height:300px;padding:10px 24px 32px 0}
+  .screen-backdrop{width:95%;padding:8px;border-radius:20px}
+  .screen-backdrop img{border-radius:13px}
+  .app-device{width:34%;min-width:112px;border-width:4px;border-radius:22px}
+  .app-device-bar{height:4px;margin:6px auto 5px}
+  .app-device-screen{border-radius:15px}
   .section{padding:58px 0}
   .section h2,.cta h2{font-size:2rem}
   .card,.price-card{padding:22px}
