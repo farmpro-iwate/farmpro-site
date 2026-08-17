@@ -32,13 +32,21 @@ a{text-decoration:none;color:inherit}
 .hero-lead{font-size:1.15rem;color:#4e5a53;margin:24px 0 28px}
 .hero-actions{display:flex;gap:12px;flex-wrap:wrap}
 .microcopy{font-size:.9rem;color:var(--muted);margin-top:14px}
-.hero-visual{position:relative;min-height:430px;display:flex;align-items:center;justify-content:center;padding:22px 28px 34px 8px}
-.screen-backdrop{width:92%;background:white;border:1px solid #e3eae5;border-radius:28px;padding:12px;box-shadow:0 18px 42px rgba(0,0,0,.10);transform:translate(-2%, -2%)}
+.hero-visual{position:relative;min-height:430px;display:flex;align-items:center;justify-content:center;padding:22px 52px 30px 8px}
+.screen-backdrop{width:94%;background:white;border:1px solid #e3eae5;border-radius:28px;padding:12px;box-shadow:0 18px 42px rgba(0,0,0,.10);transform:translate(-3%, -1%)}
 .screen-backdrop img{border-radius:18px}
-.app-device{position:absolute;right:0;bottom:0;width:38%;min-width:150px;max-width:210px;background:#17201a;border:6px solid #17201a;border-radius:30px;box-shadow:0 20px 44px rgba(0,0,0,.22);overflow:hidden;transform:rotate(1.5deg)}
-.app-device-bar{width:42%;height:6px;border-radius:999px;background:#4e5a53;margin:9px auto 7px}
-.app-device-screen{background:white;border-radius:20px;overflow:hidden;aspect-ratio:9/18.5}
-.app-device-screen img{height:100%;width:100%;object-fit:cover;object-position:50% 10%;transform:scale(1.75);transform-origin:50% 10%}
+.app-preview{position:absolute;right:0;bottom:4px;width:35%;min-width:164px;max-width:205px;background:white;border:6px solid #17201a;border-radius:30px;box-shadow:0 20px 44px rgba(0,0,0,.20);overflow:hidden;transform:rotate(1deg)}
+.app-preview-top{background:var(--green);color:white;padding:14px 10px 10px;display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:.62rem;font-weight:800}
+.app-preview-top strong{font-size:.72rem;white-space:nowrap}
+.app-preview-top span{border:1px solid rgba(255,255,255,.75);border-radius:999px;padding:3px 7px;white-space:nowrap}
+.app-preview-body{padding:14px 12px 16px;background:#fafcfb;min-height:285px}
+.app-preview-kicker{margin:0 0 2px;font-size:.82rem;font-weight:900;color:#202724}
+.app-preview-text{margin:0 0 12px;font-size:.58rem;line-height:1.45;color:#6a746e}
+.app-preview-grid{display:grid;grid-template-columns:1fr 1fr;gap:7px}
+.app-preview-grid div,.app-preview-wide{background:white;border:1px solid #dfe6e1;border-radius:10px;padding:9px 8px}
+.app-preview-grid span,.app-preview-wide span{display:block;font-size:.55rem;color:#68736c}
+.app-preview-grid strong,.app-preview-wide strong{display:block;font-size:.9rem;color:#202724;margin-top:2px}
+.app-preview-wide{margin-top:7px}
 .section{padding:82px 0}
 .section-soft{background:var(--green-soft)}
 .section-dark{background:var(--dark);color:white}
@@ -98,12 +106,19 @@ details p{color:#5a665e;margin-bottom:0}
   .hero-lead{font-size:1rem}
   .hero-actions{flex-direction:column}
   .hero-actions .btn{width:100%}
-  .hero-visual{min-height:300px;padding:10px 24px 32px 0}
-  .screen-backdrop{width:95%;padding:8px;border-radius:20px}
+  .hero-visual{min-height:300px;padding:10px 34px 32px 0}
+  .screen-backdrop{width:96%;padding:8px;border-radius:20px}
   .screen-backdrop img{border-radius:13px}
-  .app-device{width:34%;min-width:112px;border-width:4px;border-radius:22px}
-  .app-device-bar{height:4px;margin:6px auto 5px}
-  .app-device-screen{border-radius:15px}
+  .app-preview{width:36%;min-width:118px;border-width:4px;border-radius:22px}
+  .app-preview-top{padding:10px 7px 7px;font-size:.48rem}
+  .app-preview-top strong{font-size:.55rem}
+  .app-preview-body{padding:10px 8px 12px;min-height:205px}
+  .app-preview-kicker{font-size:.62rem}
+  .app-preview-text{font-size:.45rem;margin-bottom:8px}
+  .app-preview-grid{gap:5px}
+  .app-preview-grid div,.app-preview-wide{padding:6px 5px;border-radius:7px}
+  .app-preview-grid span,.app-preview-wide span{font-size:.42rem}
+  .app-preview-grid strong,.app-preview-wide strong{font-size:.66rem}
   .section{padding:58px 0}
   .section h2,.cta h2{font-size:2rem}
   .card,.price-card{padding:22px}
