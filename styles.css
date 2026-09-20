@@ -502,3 +502,123 @@
   border-bottom:3px solid #0b67d0;
   padding:0 10px 6px 6px;
 }
+
+/* AI section aligned with approved hero */
+.ai-section{
+  background:linear-gradient(180deg,#ffffff 0%,#f4f9ff 100%);
+  color:#17212b;
+  overflow:visible;
+  border-top:1px solid #e7eef6;
+  border-bottom:1px solid #e7eef6;
+}
+.ai-showcase{
+  display:grid;
+  grid-template-columns:.78fr 1.22fr;
+  gap:72px;
+  align-items:center;
+}
+.ai-device-card{
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  min-height:520px;
+}
+.ai-device-card:before{
+  content:"";
+  position:absolute;
+  width:390px;
+  height:390px;
+  border-radius:50%;
+  background:radial-gradient(circle,#dceeff 0%,rgba(220,238,255,0) 72%);
+  z-index:0;
+}
+.ai-device-label{
+  position:absolute;
+  top:22px;
+  left:50%;
+  transform:translateX(-50%);
+  z-index:3;
+  padding:7px 13px;
+  border:1px solid #cfe1f3;
+  border-radius:999px;
+  background:#fff;
+  color:#0d47a1;
+  font-size:.82rem;
+  font-weight:900;
+  box-shadow:0 8px 20px rgba(20,61,102,.08);
+}
+.ai-device-card .phone-shell{
+  position:relative;
+  z-index:2;
+  width:min(100%,300px);
+  padding:10px;
+  border-radius:38px;
+  background:#101820;
+  box-shadow:0 28px 60px rgba(20,61,102,.20);
+}
+.ai-device-card .phone-shell img{width:100%;border-radius:28px}
+.ai-copy .eyebrow{color:#1976d2}
+.ai-copy h2{
+  margin:0;
+  color:#17212b;
+  font-size:clamp(2rem,3vw,2.9rem);
+  line-height:1.22;
+}
+.ai-copy .lead{
+  margin:22px 0 28px;
+  color:#5d6975;
+  font-size:1.05rem;
+  line-height:1.9;
+}
+.ai-plan-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:16px;
+}
+.ai-plan-card{
+  padding:22px;
+  border:1px solid #d9e5f0;
+  border-radius:18px;
+  background:#fff;
+  box-shadow:0 12px 28px rgba(20,61,102,.06);
+}
+.ai-plan-card-standard{
+  border-color:#b9d7f2;
+  background:linear-gradient(180deg,#ffffff 0%,#f1f7fe 100%);
+}
+.ai-plan-head{display:grid;gap:6px;margin-bottom:10px}
+.ai-plan-head span{
+  display:inline-flex;
+  width:max-content;
+  padding:4px 9px;
+  border-radius:999px;
+  background:#eaf4fd;
+  color:#0d47a1;
+  font-size:.76rem;
+  font-weight:900;
+}
+.ai-plan-head strong{font-size:1.03rem;color:#1c2935}
+.ai-plan-card p{margin:0;color:#66727e;font-size:.93rem}
+.ai-example{
+  margin-top:14px;
+  padding:10px 12px;
+  border-radius:12px;
+  background:#f7fafc;
+  color:#31506b;
+  font-size:.84rem;
+  font-weight:700;
+}
+.ai-note{
+  margin:18px 0 0;
+  color:#6b7785;
+  font-size:.88rem;
+}
+@media(max-width:900px){
+  .ai-showcase{grid-template-columns:1fr;gap:38px}
+  .ai-device-card{min-height:auto;padding:30px 0 10px}
+}
+@media(max-width:560px){
+  .ai-plan-grid{grid-template-columns:1fr}
+  .ai-device-card .phone-shell{width:min(78vw,285px)}
+}
