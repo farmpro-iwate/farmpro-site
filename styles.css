@@ -468,3 +468,15 @@
   .handwritten-note{display:none}
   .section-intro{font-size:.96rem}
 }
+
+/* hero cleanup after visual review */
+.handwritten-note{
+  right:34px;
+  bottom:-42px;
+  width:270px;
+}
+.hero-product{padding-bottom:44px}
+.hero-landscape{height:150px}
+@media(max-width:900px){
+  .handwritten-note{right:18px;bottom:-12px}
+}
