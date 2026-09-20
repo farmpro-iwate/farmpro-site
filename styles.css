@@ -1082,3 +1082,36 @@
 
 /* handwritten hero slogan removed */
 .handwritten-note{display:none !important}
+
+/* Trust strip before pricing */
+.trust-strip{
+  padding:26px 0;
+  background:#f8fbfe;
+  border-top:1px solid #e5edf5;
+  border-bottom:1px solid #e5edf5;
+}
+.trust-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:14px;
+}
+.trust-grid>div{
+  padding:18px 20px;
+  border:1px solid #dce7f2;
+  border-radius:16px;
+  background:#fff;
+}
+.trust-grid strong{
+  display:block;
+  margin-bottom:4px;
+  color:#17324d;
+  font-size:.96rem;
+}
+.trust-grid span{
+  color:#6a7784;
+  font-size:.86rem;
+  line-height:1.6;
+}
+@media(max-width:700px){
+  .trust-grid{grid-template-columns:1fr}
+}
