@@ -860,3 +860,65 @@
   .device-phone{min-width:100px;padding:5px;border-radius:20px}
   .device-phone img{border-radius:15px}
 }
+
+/* FAQ + final CTA finish */
+.faq-wrap details{
+  overflow:hidden;
+  border:1px solid #dce7f2;
+  border-radius:18px;
+  background:#fff;
+}
+.faq-wrap summary{
+  position:relative;
+  padding:22px 54px 22px 24px;
+  cursor:pointer;
+  list-style:none;
+  outline:none;
+  color:#1d2a36;
+  font-weight:800;
+  line-height:1.5;
+}
+.faq-wrap summary::-webkit-details-marker{display:none}
+.faq-wrap summary::after{
+  content:"+";
+  position:absolute;
+  right:24px;
+  top:50%;
+  transform:translateY(-50%);
+  width:28px;
+  height:28px;
+  display:grid;
+  place-items:center;
+  border-radius:50%;
+  background:#eef5fb;
+  color:#1976d2;
+  font-size:1.2rem;
+  font-weight:700;
+}
+.faq-wrap details[open] summary::after{content:"−"}
+.faq-wrap summary:focus,
+.faq-wrap summary:focus-visible{
+  outline:none;
+  box-shadow:none;
+}
+.faq-wrap details[open] summary{
+  border-bottom:1px solid #edf2f7;
+}
+.faq-wrap details p{
+  margin:0;
+  padding:18px 24px 22px;
+  color:#66727e;
+  line-height:1.8;
+}
+.cta{
+  padding:86px 0;
+}
+.cta h2{
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
+  line-height:1.22;
+}
+.cta .btn{
+  min-width:220px;
+}
