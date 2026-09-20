@@ -1079,3 +1079,6 @@
 @media(max-width:560px){
   .handwritten-note{display:none !important}
 }
+
+/* handwritten hero slogan removed */
+.handwritten-note{display:none !important}
