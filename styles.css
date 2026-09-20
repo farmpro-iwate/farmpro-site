@@ -1167,3 +1167,38 @@
   .start-grid{grid-template-columns:1fr}
   .start-grid article{padding:24px 20px}
 }
+
+/* Contact strip */
+.contact-strip{
+  padding:34px 0;
+  background:#fff;
+  border-top:1px solid #e7eef6;
+}
+.contact-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:28px;
+}
+.contact-inner h2{
+  margin:4px 0 8px;
+  font-size:1.55rem;
+  color:#17212b;
+}
+.contact-inner p{
+  margin:0;
+  color:#66727e;
+}
+.contact-inner .btn{
+  flex:0 0 auto;
+  min-width:170px;
+}
+@media(max-width:700px){
+  .contact-inner{
+    align-items:flex-start;
+    flex-direction:column;
+  }
+  .contact-inner .btn{
+    width:100%;
+  }
+}
