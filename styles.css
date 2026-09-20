@@ -1040,3 +1040,42 @@
   .hero-title-accent{margin-top:4px}
   .phone-overlay{min-width:92px}
 }
+
+/* FINAL handwritten slogan: smaller + black */
+.handwritten-note{
+  right:48px !important;
+  bottom:-24px !important;
+  width:220px !important;
+  color:#111 !important;
+  font-family:"Yomogi","Yu Gothic","Meiryo",cursive !important;
+  font-weight:400 !important;
+  letter-spacing:.04em !important;
+  transform:rotate(-5deg) !important;
+  text-shadow:none !important;
+}
+.handwritten-note span{
+  color:#111 !important;
+}
+.handwritten-note span:first-child{
+  font-size:1.08rem !important;
+  line-height:1.1 !important;
+}
+.handwritten-note span:last-child{
+  margin-top:6px !important;
+  margin-left:26px !important;
+  font-size:1.18rem !important;
+  border-bottom:2px solid #111 !important;
+  padding:0 6px 4px 4px !important;
+}
+@media(max-width:900px){
+  .handwritten-note{
+    right:18px !important;
+    bottom:-8px !important;
+    width:190px !important;
+  }
+  .handwritten-note span:first-child{font-size:1rem !important}
+  .handwritten-note span:last-child{font-size:1.08rem !important}
+}
+@media(max-width:560px){
+  .handwritten-note{display:none !important}
+}
