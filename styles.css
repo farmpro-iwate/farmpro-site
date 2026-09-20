@@ -689,3 +689,105 @@
   .feature-summary{justify-content:flex-start;gap:8px;padding:14px}
   .feature-summary span{font-size:.82rem;padding:7px 11px}
 }
+
+/* Breeding workflow */
+.workflow-section{
+  background:#fff;
+}
+.breeding-flow{
+  display:grid;
+  grid-template-columns:1fr auto 1fr auto 1fr auto 1fr auto 1fr;
+  gap:14px;
+  align-items:stretch;
+}
+.breeding-flow article{
+  position:relative;
+  min-height:245px;
+  padding:24px 20px 22px;
+  border:1px solid #dce7f2;
+  border-radius:20px;
+  background:linear-gradient(180deg,#ffffff 0%,#fbfdff 100%);
+  box-shadow:0 12px 28px rgba(20,61,102,.055);
+}
+.breeding-flow .final-step{
+  border-color:#b8d6f1;
+  background:linear-gradient(180deg,#f8fcff 0%,#eef6fd 100%);
+}
+.step-no{
+  position:absolute;
+  top:16px;
+  right:18px;
+  color:#c6d8e9;
+  font-size:.78rem;
+  font-weight:900;
+  letter-spacing:.08em;
+}
+.step-icon{
+  width:48px;
+  height:48px;
+  display:grid;
+  place-items:center;
+  margin-bottom:18px;
+  border-radius:14px;
+  background:#eaf4fd;
+  color:#0d47a1;
+  font-weight:900;
+  font-size:.95rem;
+  border:1px solid #d0e2f3;
+}
+.final-step .step-icon{
+  background:#1976d2;
+  color:#fff;
+  border-color:#1976d2;
+}
+.breeding-flow h3{
+  margin:0 0 10px;
+  font-size:1.08rem;
+}
+.breeding-flow p{
+  margin:0;
+  color:#66727e;
+  font-size:.9rem;
+  line-height:1.75;
+}
+.flow-arrow{
+  display:grid;
+  place-items:center;
+  color:#8ea6ba;
+  font-size:1.4rem;
+  font-weight:800;
+}
+.workflow-bottom{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:16px;
+  margin-top:28px;
+}
+.workflow-bottom>div{
+  padding:18px 20px;
+  border-radius:16px;
+  background:#f6f9fc;
+  border:1px solid #e0e9f2;
+}
+.workflow-bottom strong{
+  display:block;
+  margin-bottom:5px;
+  color:#1c2c3a;
+}
+.workflow-bottom span{
+  color:#6c7884;
+  font-size:.88rem;
+  line-height:1.6;
+}
+@media(max-width:1100px){
+  .breeding-flow{
+    grid-template-columns:1fr 1fr;
+  }
+  .flow-arrow{display:none}
+}
+@media(max-width:700px){
+  .breeding-flow,
+  .workflow-bottom{
+    grid-template-columns:1fr;
+  }
+}
