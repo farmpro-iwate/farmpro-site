@@ -393,3 +393,78 @@
   .handwritten-note{display:none}
   .hero-landscape{height:105px}
 }
+
+/* sales page finish pass */
+.hero .farmer-made{font-size:1rem}
+.handwritten-note{
+  right:20px;
+  bottom:-82px;
+  width:250px;
+  transform:rotate(-7deg);
+  border-bottom:0;
+  padding:0;
+  font-family:"Segoe Print","Yu Gothic","Meiryo",cursive;
+  font-weight:700;
+  line-height:1.18;
+}
+.handwritten-note span{display:block}
+.handwritten-note span:first-child{font-size:1.34rem}
+.handwritten-note span:last-child{
+  margin-top:6px;
+  margin-left:38px;
+  font-size:1.52rem;
+  border-bottom:3px solid #146ed1;
+  padding-bottom:5px;
+}
+.section-intro{
+  max-width:720px;
+  margin:12px auto 0;
+  color:#667085;
+  font-size:1.02rem;
+}
+.section-heading.left .section-intro{margin-left:0}
+.feature-grid article{
+  transition:transform .18s ease,box-shadow .18s ease,border-color .18s ease;
+}
+.feature-grid article:hover{
+  transform:translateY(-3px);
+  border-color:#c8dced;
+  box-shadow:0 14px 30px rgba(20,61,102,.08);
+}
+.feature-grid .icon{
+  background:linear-gradient(180deg,#eef7ff,#e4f0fb);
+  border:1px solid #d3e4f3;
+}
+.flow{
+  background:linear-gradient(180deg,#fbfdff,#f4f8fc);
+  box-shadow:0 14px 30px rgba(23,67,110,.06);
+}
+.dark-grid div{
+  backdrop-filter:blur(3px);
+  transition:transform .18s ease,background .18s ease;
+}
+.dark-grid div:hover{
+  transform:translateY(-3px);
+  background:rgba(255,255,255,.11);
+}
+.price-card{
+  box-shadow:0 14px 34px rgba(25,71,120,.07);
+}
+.price-card.featured{
+  box-shadow:0 22px 44px rgba(25,118,210,.14);
+}
+.faq-wrap details{
+  box-shadow:0 8px 20px rgba(20,61,102,.035);
+}
+.cta{
+  background:
+    radial-gradient(circle at 15% 20%,rgba(255,255,255,.14),transparent 26%),
+    linear-gradient(135deg,#1169bf,#1976d2);
+}
+@media(max-width:900px){
+  .handwritten-note{right:18px;bottom:-28px;width:220px}
+}
+@media(max-width:560px){
+  .handwritten-note{display:none}
+  .section-intro{font-size:.96rem}
+}
