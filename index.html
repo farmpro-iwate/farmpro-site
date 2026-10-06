@@ -14,6 +14,23 @@
   <meta property="og:description" content="個体・繁殖・治療・子牛・予定・経営をFarmProひとつで。AIに質問でき、現場の内容をAIで記録できます。" />
   <meta property="og:url" content="https://farmpro-app.jp/" />
   <link rel="stylesheet" href="styles.css?v=20260920-final" />
+  <style id="pc-free-guide-styles">
+    /* Keep the existing registration route; only the desktop guidance changes. */
+    .btn .free-cta-label { font: inherit; line-height: inherit; }
+    .free-cta-desktop, .pc-free-guide { display: none; }
+    @media (min-width: 901px) and (hover: hover) and (pointer: fine) {
+      .free-cta-default { display: none; }
+      .free-cta-desktop { display: inline; }
+      .pc-free-guide {
+        display: block;
+        margin: 0 0 14px;
+        color: var(--muted);
+        font-size: .9rem;
+        line-height: 1.7;
+      }
+      .pc-free-guide strong { color: var(--blue-dark); font-size: .96rem; }
+    }
+  </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KSR4VTW3Y4"></script>
   <script>
@@ -47,8 +64,9 @@
         <h1><span class="hero-title-main">繁殖農家の毎日を、</span><span class="hero-title-accent">もっと分かりやすく。</span></h1>
         <p class="hero-lead">個体・繁殖・治療・子牛・予定・経営を、FarmProひとつで。<br>今の状態と、次にやることが分かります。</p>
         <div class="ai-chip">✦ 「AIに聞く」で確認。「AIで記録」で現場の作業を記録できます。</div>
+        <p class="pc-free-guide"><strong>PCでも、FarmProを無料で始められます。</strong><br>牛の情報登録や日々の記録を、PCの大きな画面で。</p>
         <div class="hero-actions">
-          <a class="btn btn-primary hero-cta" href="https://app.farmpro-app.jp/register">無料で始める <span>›</span></a>
+          <a class="btn btn-primary hero-cta" href="https://app.farmpro-app.jp/register"><span class="free-cta-label free-cta-default">無料で始める</span><span class="free-cta-label free-cta-desktop">このPCで無料版を始める</span> <span aria-hidden="true">›</span></a>
         </div>
         <p class="microcopy">繁殖雌牛10頭まで無料。クレジットカード不要。</p>
       </div>
@@ -267,7 +285,7 @@
           <div class="plan">Free</div><div class="price"><b>0円</b></div>
           <p>繁殖雌牛10頭まで</p>
           <ul><li>主要機能</li><li>AI操作案内</li><li>端末内保存</li><li>手動バックアップ</li></ul>
-          <a class="btn btn-secondary full" href="https://app.farmpro-app.jp/register">無料で始める</a>
+          <a class="btn btn-secondary full" href="https://app.farmpro-app.jp/register"><span class="free-cta-label free-cta-default">無料で始める</span><span class="free-cta-label free-cta-desktop">このPCで無料版を始める</span></a>
         </article>
         <article class="price-card featured">
           <div class="badge">おすすめ</div><div class="plan">Standard</div>
@@ -314,7 +332,7 @@
       </div>
 
       <div class="start-cta">
-        <a class="btn btn-primary" href="https://app.farmpro-app.jp/register">無料で始める</a>
+        <a class="btn btn-primary" href="https://app.farmpro-app.jp/register"><span class="free-cta-label free-cta-default">無料で始める</span><span class="free-cta-label free-cta-desktop">このPCで無料版を始める</span></a>
       </div>
     </div>
   </section>
@@ -335,7 +353,7 @@
       <span class="eyebrow light">FarmPro Free</span>
       <h2>まずは、繁殖雌牛10頭まで無料で。</h2>
       <p>実際に使って、農場に合うか確かめてください。</p>
-      <a class="btn btn-white" href="https://app.farmpro-app.jp/register">無料で始める</a>
+      <a class="btn btn-white" href="https://app.farmpro-app.jp/register"><span class="free-cta-label free-cta-default">無料で始める</span><span class="free-cta-label free-cta-desktop">このPCで無料版を始める</span></a>
     </div>
   </section>
 
