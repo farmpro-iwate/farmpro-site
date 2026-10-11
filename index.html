@@ -48,13 +48,13 @@
     .hero-grid{grid-template-columns:.95fr 1.05fr;gap:38px}
     .hero .farmer-made{color:#50708b;font-size:.89rem;font-weight:700;margin-bottom:20px}
     .hero h1{font-size:clamp(2.2rem,3.45vw,3.5rem);line-height:1.24}
-    .hero-title-accent{margin-top:3px}
+    .hero-title-accent{margin-top:3px} .hero-copy{display:flex;flex-direction:column;align-items:flex-start;justify-content:center} .hero-copy .hero-actions{margin-top:34px}
     .hero-lead{font-size:1.04rem;line-height:1.75;margin:20px 0 26px}
     .hero-product{filter:drop-shadow(0 12px 22px rgba(23,62,100,.06))}
-    .hero-poster{display:block;width:min(100%,580px);aspect-ratio:1/1;height:auto;margin-inline:auto;object-fit:cover;object-position:right center;border-radius:16px;box-shadow:0 12px 30px rgba(15,60,102,.10)}
+    .hero-poster{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;border-radius:16px;box-shadow:0 12px 30px rgba(15,60,102,.10)}
     .hero-poster[hidden],.hero-poster-fallback[hidden]{display:none!important}
 
-    .hero .microcopy{font-size:.85rem;color:#738293}
+    .hero .microcopy{font-size:.85rem;color:#738293;margin-top:14px}
     @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:24px}.hero{padding:42px 0 46px}.hero-product{max-width:680px}}
     @media(max-width:560px){.hero{padding:28px 0 36px}.hero h1{font-size:clamp(1.9rem,8vw,2.45rem)}.hero-lead{font-size:.96rem;margin:18px 0 22px}.hero .farmer-made{font-size:.82rem;margin-bottom:12px}.hero-product{padding-top:0}}
   </style>
@@ -88,7 +88,7 @@
       <div class="hero-copy">
         <p class="farmer-made">農家が作った、和牛繁殖農家のためのFarmPro。</p>
         <h1><span class="hero-title-main">入力する管理から、</span><span class="hero-title-accent">AIと話す管理へ。</span></h1>
-        <p class="hero-lead">牛の記録も、繁殖予定も、経営も。<br>FarmProひとつで、もっと分かりやすく。</p>
+        
         <div class="hero-actions">
           <a class="btn btn-primary hero-cta" href="https://app.farmpro-app.jp/register"><span class="free-cta-label free-cta-default">無料で始める</span><span class="free-cta-label free-cta-desktop">このPCで無料版を始める</span> <span aria-hidden="true">›</span></a>
         </div>
