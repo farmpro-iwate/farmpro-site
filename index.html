@@ -51,6 +51,9 @@
     .hero-title-accent{margin-top:3px}
     .hero-lead{font-size:1.04rem;line-height:1.75;margin:20px 0 26px}
     .hero-product{filter:drop-shadow(0 12px 22px rgba(23,62,100,.06))}
+    .hero-poster{display:block;width:100%;height:auto;border-radius:16px;box-shadow:0 12px 30px rgba(15,60,102,.10)}
+    .hero-poster[hidden],.hero-poster-fallback[hidden]{display:none!important}
+
     .hero .microcopy{font-size:.85rem;color:#738293}
     @media(max-width:900px){.hero-grid{grid-template-columns:1fr;gap:24px}.hero{padding:42px 0 46px}.hero-product{max-width:680px}}
     @media(max-width:560px){.hero{padding:28px 0 36px}.hero h1{font-size:clamp(1.9rem,8vw,2.45rem)}.hero-lead{font-size:.96rem;margin:18px 0 22px}.hero .farmer-made{font-size:.82rem;margin-bottom:12px}.hero-product{padding-top:0}}
@@ -92,7 +95,9 @@
         <p class="microcopy">繁殖雌牛10頭まで無料。クレジットカード不要。</p>
       </div>
 
-      <div class="hero-product" aria-label="FarmProの実際の画面">
+      <div class="hero-product" aria-label="FarmProの画面と利用イメージ">
+        <img class="hero-poster" src="farmpro-hero-ai.webp" alt="和牛繁殖農家向けFarmPro。牛の個体管理・繁殖管理・経営分析とAI機能のイメージ" onload="this.nextElementSibling.hidden=true" onerror="this.hidden=true" />
+        <div class="hero-poster-fallback">
         <div class="laptop-shell">
           <div class="laptop-camera"></div>
           <div class="laptop-screen">
@@ -103,6 +108,7 @@
         <div class="phone-overlay">
           <div class="phone-notch"></div>
           <img src="farmpro-mobile-ai.webp" alt="FarmProスマホ版のAI操作案内画面" />
+        </div>
         </div>
       </div>
     </div>
