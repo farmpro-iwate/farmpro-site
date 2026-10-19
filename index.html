@@ -24,6 +24,12 @@
   <meta name="twitter:image" content="https://farmpro-app.jp/farmpro-social-20261011.jpg" />
   <meta name="twitter:image:alt" content="繁殖Farm Pro。入力する管理から、AIと話す管理へ。牛とアプリ画面を並べた青基調の画像。" />
   <link rel="stylesheet" href="styles.css?v=20260920-final" />
+  <style id="line-signup-entry-styles">
+    .hero .hero-actions { display:flex; flex-direction:column; align-items:stretch; gap:12px; width:min(100%,390px); }
+    .hero .hero-actions .btn { display:flex; justify-content:center; align-items:center; min-height:52px; text-align:center; }
+    .hero .hero-actions .line-signup-cta { background:#06C755; color:#fff; border-color:#06C755; font-weight:700; }
+    .hero .hero-actions .line-signup-cta:hover { background:#05b54d; border-color:#05b54d; color:#fff; }
+  </style>
   <style id="pc-free-guide-styles">
     /* Keep the existing registration route; only the desktop guidance changes. */
     .btn .free-cta-label { font: inherit; line-height: inherit; }
@@ -90,7 +96,7 @@
 
         <div class="hero-actions">
           <a class="btn btn-primary hero-cta" href="https://app.farmpro-app.jp/register"><span class="free-cta-label free-cta-default">無料で始める</span><span class="free-cta-label free-cta-desktop">このPCで無料版を始める</span> <span aria-hidden="true">›</span></a>
-          <a class="btn" href="https://app.farmpro-app.jp/api/auth/line/start" style="background:#06C755;color:#fff;border-color:#06C755;font-weight:700" aria-label="LINEで無料登録">LINEで無料登録 <span aria-hidden="true">›</span></a>
+          <a class="btn line-signup-cta" href="https://app.farmpro-app.jp/api/auth/line/start" aria-label="LINEで無料登録">LINEで無料登録 <span aria-hidden="true">›</span></a>
         </div>
         <p class="microcopy">繁殖雌牛10頭まで無料。クレジットカード不要。</p>
       </div>
