@@ -24,6 +24,17 @@
   <meta name="twitter:image" content="https://farmpro-app.jp/farmpro-social-20261011.jpg" />
   <meta name="twitter:image:alt" content="繁殖Farm Pro。入力する管理から、AIと話す管理へ。牛とアプリ画面を並べた青基調の画像。" />
   <link rel="stylesheet" href="styles.css?v=20260920-final" />
+  <style id="line-signup-entry-styles">
+    .hero .hero-actions { display:flex; flex-direction:column; align-items:stretch; gap:12px; width:min(100%,390px); }
+    .hero .hero-actions .btn { display:flex; justify-content:center; align-items:center; min-height:52px; text-align:center; }
+    .hero .hero-actions .line-signup-cta { background:#06C755; color:#fff; border-color:#06C755; font-weight:700; }
+    .hero .hero-actions .line-signup-cta:hover { background:#05b54d; border-color:#05b54d; color:#fff; }
+    .hero .signup-section-title {font-size:.95rem;font-weight:800;margin:22px 0 6px;color:#234b6b;}
+    .hero .signup-care-note {font-size:.84rem;line-height:1.65;color:#526477;margin:9px 0 0;max-width:390px;}
+    .hero .login-options {display:flex;gap:8px 16px;flex-wrap:wrap;margin-top:8px;}
+    .hero .login-options a {font-size:.92rem;font-weight:700;color:#1663a7;text-underline-offset:3px;}
+    .hero .login-options a:focus-visible {outline:3px solid #1976d2;outline-offset:3px;}
+  </style>
   <style id="pc-free-guide-styles">
     /* Keep the existing registration route; only the desktop guidance changes. */
     .btn .free-cta-label { font: inherit; line-height: inherit; }
@@ -88,9 +99,18 @@
       <div class="hero-copy">
         <p class="farmer-made">農家が作った、和牛繁殖農家のためのFarmPro。</p>
 
+        <p class="signup-section-title">初めての方（無料登録）</p>
         <div class="hero-actions">
-          <a class="btn btn-primary hero-cta" href="https://app.farmpro-app.jp/register"><span class="free-cta-label free-cta-default">無料で始める</span><span class="free-cta-label free-cta-desktop">このPCで無料版を始める</span> <span aria-hidden="true">›</span></a>
+          <a class="btn btn-primary hero-cta" href="https://app.farmpro-app.jp/register"><span class="free-cta-label free-cta-default">メールで無料登録</span><span class="free-cta-label free-cta-desktop">このPCで無料版を始める</span> <span aria-hidden="true">›</span></a>
+          <a class="btn line-signup-cta" href="https://app.farmpro-app.jp/api/auth/line/start" aria-label="LINEで無料登録">LINEで無料登録 <span aria-hidden="true">›</span></a>
         </div>
+        <p class="signup-care-note">LINEとメールで別々に新規登録すると、別の農場アカウントになります。どちらか一方を選んでください。</p>
+        <p class="signup-section-title">登録済みの方（ログイン）</p>
+        <div class="login-options">
+          <a href="https://app.farmpro-app.jp/login">メールでログイン</a>
+          <a href="https://app.farmpro-app.jp/api/auth/line/start">LINEでログイン</a>
+        </div>
+        <p class="signup-care-note">すでにお使いの方は、新規登録せず、登録した方法でログインしてください。</p>
         <p class="microcopy">繁殖雌牛10頭まで無料。クレジットカード不要。</p>
       </div>
 
@@ -343,7 +363,7 @@
         <article>
           <div class="start-no">01</div>
           <h3>無料登録</h3>
-          <p>メールアドレスなど必要な情報を入力して、FarmProを始めます。</p>
+          <p>LINEまたはメールを選び、FarmProの無料アカウントを作成します。</p>
         </article>
         <article>
           <div class="start-no">02</div>
