@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,follow">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <meta name="theme-color" content="#1976d2">
+  <title>登録不要の操作体験｜FarmPro</title>
+  <meta name="description" content="見本の牛データで、予定・個体履歴・販売と経費を体験。登録不要でFarmProの使い方を確認できます。">
+  <link rel="stylesheet" href="demo.css?v=20261104">
+  <script src="demo.js?v=20261104" defer></script>
+</head>
+<body>
+  <header class="header"><a class="brand" href="./">FarmPro</a><a href="./">販売サイトへ戻る</a></header>
+  <main>
+    <div class="intro"><span class="eyebrow">登録不要・無料の操作体験</span><h1>触って分かる、<br>農場の記録と経営。</h1><p>見本の農場で、予定の確認から販売・経費まで試してみてください。</p></div>
+    <aside class="notice"><strong>見本データを使った体験専用画面です。</strong><span>実際のFarmProの主要な使い方を簡略化しています。入力内容は送信・保存されず、再読み込みすると元に戻ります。</span></aside>
+    <noscript><p class="notice">操作体験にはJavaScriptを有効にしてください。<a href="./">販売サイトへ戻る</a></p></noscript>
+    <nav class="steps" aria-label="体験メニュー">
+      <button type="button" data-screen="today" aria-current="page" aria-controls="today"><span>01</span>今日の予定</button>
+      <button type="button" data-screen="cows" aria-controls="cows"><span>02</span>牛の履歴</button>
+      <button type="button" data-screen="sales" aria-controls="sales"><span>03</span>販売と経費</button>
+    </nav>
+    <div class="workspace">
+      <div class="farm-label"><span>体験農場 ／ 架空の牛・記録</span><button class="text-button" id="reset" type="button">体験を最初に戻す</button></div>
+      <section id="today" aria-labelledby="today-heading">
+        <div class="section-head"><div><span class="eyebrow" id="today-date"></span><h2 id="today-heading" tabindex="-1">今日、どの牛に何をする？</h2></div><span class="pill" id="remaining"></span></div>
+        <p class="hint">「確認済みにする」を押して、対応状況の変化を試せます。実際の記録は作成されません。</p>
+        <div class="tasks">
+          <article class="task"><div><span class="tag">妊娠鑑定</span><h3>はなこ <small>耳標 0123</small></h3><p>授精後の妊娠鑑定を予定しています。</p></div><button type="button" class="button outline task-toggle" aria-pressed="false">確認済みにする</button></article>
+          <article class="task"><div><span class="tag amber">分娩予定</span><h3>さくら <small>耳標 0456</small></h3><p>分娩予定日です。牛の状態を確認しましょう。</p></div><button type="button" class="button outline task-toggle" aria-pressed="false">確認済みにする</button></article>
+        </div>
+        <p class="takeaway">予定から、確認する牛と作業を見つけられます。</p>
+        <button class="button primary next" type="button" data-screen="cows">次へ：牛の履歴を見る →</button>
+      </section>
+      <section id="cows" aria-labelledby="cows-heading" hidden>
+        <span class="eyebrow">個体ごとの記録</span><h2 id="cows-heading" tabindex="-1">耳標番号から、経過を確認。</h2>
+        <p class="hint">牛を選ぶと、その牛の情報と繁殖履歴に切り替わります。</p>
+        <label class="field-label" for="cow-select">履歴を見る牛</label><select id="cow-select"><option value="hanako">はなこ（耳標 0123）</option><option value="sakura">さくら（耳標 0456）</option></select>
+        <div class="cow-card"><h3 id="cow-name"></h3><dl class="facts" id="cow-facts"></dl></div>
+        <h3>繁殖の履歴</h3><ol class="timeline" id="cow-history"></ol>
+        <p class="hint">履歴・日付は、操作説明用の見本です。</p>
+        <p class="takeaway">前回の記録を見ながら、次の対応を考えられます。</p>
+        <button class="button primary next" type="button" data-screen="sales">次へ：販売と経費を試す →</button>
+      </section>
+      <section id="sales" aria-labelledby="sales-heading" hidden>
+        <span class="eyebrow">販売と経費のつながり</span><h2 id="sales-heading" tabindex="-1">売値から、手元に残る金額へ。</h2>
+        <p class="hint">見本の子牛「あおば（耳標 0789）」の金額を変えて、「差引金額を確認」を押してください。</p>
+        <form id="sales-form">
+          <div class="money-fields"><label for="sale">販売額（税込・円）<input id="sale" name="sale" type="number" inputmode="numeric" min="0" max="1000000000" step="1" value="700000" required></label><label for="fee">販売手数料等（税込・円）<input id="fee" name="fee" type="number" inputmode="numeric" min="0" max="1000000000" step="1" value="25000" required></label><label for="transport">運搬費（税込・円）<input id="transport" name="transport" type="number" inputmode="numeric" min="0" max="1000000000" step="1" value="15000" required></label></div>
+          <button class="button primary" type="submit">差引金額を確認</button>
+        </form>
+        <div class="result" role="status" aria-live="polite" aria-atomic="true"><span id="result-label">見本の差引金額</span><strong id="net"></strong><p id="calculation"></p></div>
+        <p class="hint">販売額 − 販売手数料等 − 運搬費の簡易計算です。飼料費などを含めた最終利益ではありません。入力を変えた後は、ボタンを押して再計算してください。</p>
+        <p class="takeaway">販売と経費を合わせて、差引金額を確認できます。</p>
+      </section>
+      <p class="status" id="feedback" role="status" aria-live="polite"></p>
+    </div>
+    <section class="signup"><span class="eyebrow">ご自身の農場でも</span><h2>使えそう、と感じたら。</h2><p>繁殖雌牛10頭まで無料。クレジットカード不要です。</p><div class="signup-actions"><a class="button primary" href="https://app.farmpro-app.jp/register">メールで無料登録</a><a class="button line" href="https://app.farmpro-app.jp/api/auth/line/start">LINEで無料登録</a></div><p class="hint">どちらか一方を選んでください。体験中の見本データは引き継がれません。</p><a href="./#pricing">料金・機能を詳しく見る</a></section>
+  </main>
+  <footer>© 2026 FarmPro <a href="./">販売サイトへ戻る</a></footer>
+</body>
+</html>
