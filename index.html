@@ -24,6 +24,7 @@
   <meta name="twitter:image" content="https://farmpro-app.jp/farmpro-social-20261011.jpg" />
   <meta name="twitter:image:alt" content="繁殖Farm Pro。入力する管理から、AIと話す管理へ。牛とアプリ画面を並べた青基調の画像。" />
   <link rel="stylesheet" href="styles.css?v=20260920-final" />
+  <link rel="stylesheet" href="analysis.css?v=20261108" />
   <style id="line-signup-entry-styles">
     .hero .hero-actions { display:flex; flex-direction:column; align-items:stretch; gap:12px; width:min(100%,390px); }
     .hero .hero-actions .btn { display:flex; justify-content:center; align-items:center; min-height:52px; text-align:center; }
@@ -86,6 +87,7 @@
       <a href="#ai">AI</a>
       <a href="#features">機能</a>
       <a href="#workflow">繁殖管理</a>
+      <a href="#analysis">分析</a>
       <a href="demo.html">操作体験</a>
       <a href="#pricing">料金</a>
       <a href="#faq">FAQ</a>
@@ -206,7 +208,7 @@
           <div class="feature-kicker">04</div>
           <div class="icon">経</div>
           <h3>経営が分かる</h3>
-          <p>売上・経費・収支までつなげて、農場全体の状況を確認できます。</p>
+          <p>売上・経費・収支に加え、母牛ごと・農場全体の成績を確認できます。</p>
         </article>
       </div>
 
@@ -274,6 +276,68 @@
           <strong>個体管理につながる</strong>
           <span>分娩後は母牛・子牛の履歴へ自然につながります。</span>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section analysis-section" id="analysis" aria-labelledby="analysis-title">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">記録を、農場の振り返りに。｜分析</span>
+        <h2 id="analysis-title">母牛ごとの特徴も、<br>農場全体の成績も見える。</h2>
+        <p class="section-intro">日々の繁殖・分娩・出荷販売の記録から、母牛ごとの成績を比較。<br>農場全体の変化も、月別・年別の一覧表やグラフで確認できます。</p>
+      </div>
+
+      <div class="analysis-benefits">
+        <article>
+          <span class="analysis-number">01</span>
+          <h3>母牛の繁殖成績を比べる</h3>
+          <p>分娩間隔、分娩回数、授精・ETの実施回数を一覧で比較。過去の分娩履歴をたどり、牛ごとの経過を振り返れます。</p>
+        </article>
+        <article>
+          <span class="analysis-number">02</span>
+          <h3>過去の産子の成績を見る</h3>
+          <p>母牛ごとに産子の出荷日齢や販売価格を比較。産子の履歴や父牛も確認し、記録から母牛の特徴を把握できます。</p>
+        </article>
+        <article>
+          <span class="analysis-number">03</span>
+          <h3>農場全体の変化をつかむ</h3>
+          <p>分娩回数や子牛販売頭数、平均販売価格などを月別・年別に集計。個体の記録を農場全体の振り返りにつなげます。</p>
+        </article>
+      </div>
+
+      <div class="analysis-examples">
+        <figure class="analysis-example">
+          <figcaption><strong>母牛ごとの比較</strong><span>見本データ｜産子・販売成績</span></figcaption>
+          <table class="analysis-table">
+            <caption class="analysis-sr-only">架空の母牛3頭の産子・販売成績。各母牛の販売記録3頭分の平均値。</caption>
+            <thead><tr><th scope="col">母牛</th><th scope="col">平均出荷日齢</th><th scope="col">平均販売価格</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">母牛A<small>耳標 0001</small></th><td>280日<small>3頭</small></td><td>680,000円<small>3頭</small></td></tr>
+              <tr><th scope="row">母牛B<small>耳標 0002</small></th><td>290日<small>3頭</small></td><td>620,000円<small>3頭</small></td></tr>
+              <tr><th scope="row">母牛C<small>耳標 0003</small></th><td>275日<small>3頭</small></td><td>710,000円<small>3頭</small></td></tr>
+            </tbody>
+          </table>
+          <p class="analysis-example-note">分娩間隔などの繁殖成績も、一覧表・グラフで比較できます。</p>
+        </figure>
+
+        <figure class="analysis-example">
+          <figcaption><strong>農場全体の成績</strong><span>見本データ｜月別の子牛販売頭数</span></figcaption>
+          <div class="analysis-chart" role="img" aria-label="架空の農場の月別子牛販売頭数。4月2頭、5月4頭、6月3頭。横軸は0から4頭。">
+            <div class="analysis-chart-scale" aria-hidden="true"><span>0</span><span>4頭</span></div>
+            <div class="analysis-chart-row" aria-hidden="true"><span>4月</span><div class="analysis-track"><i style="width:50%"></i></div><b>2頭</b></div>
+            <div class="analysis-chart-row" aria-hidden="true"><span>5月</span><div class="analysis-track"><i style="width:100%"></i></div><b>4頭</b></div>
+            <div class="analysis-chart-row" aria-hidden="true"><span>6月</span><div class="analysis-track"><i style="width:75%"></i></div><b>3頭</b></div>
+          </div>
+          <p class="analysis-example-note">年を選ぶと月別、全期間を選ぶと年別に比較できます。</p>
+        </figure>
+      </div>
+      <p class="analysis-sample-note">上の表・グラフは架空の見本データによる紹介用イメージです。実際の画面とは異なります。集計には、登録された記録を使用します。</p>
+      <p class="analysis-context-note">平均は記録のある実績から計算し、対象件数も表示します。販売価格は性別・父牛・販売時期などでも変わるため、母牛の特徴を振り返る参考として確認できます。</p>
+      <div class="analysis-next">
+        <p><strong>いつもの記録が、次の判断の材料に。</strong><br>まずは見本の牛で、FarmProの記録・確認の流れを試してみてください。</p>
+        <a class="btn btn-primary" href="demo.html">登録せずに操作を体験する <span aria-hidden="true">›</span></a>
+        <small>操作体験では予定・牛の履歴・販売と経費を試せます。分析の操作はアプリ内でご確認ください。</small>
       </div>
     </div>
   </section>
