@@ -73,13 +73,14 @@
 
   <style id="media-mentions-styles">
     .media-mentions{background:#fff}
-    .media-mentions-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;max-width:900px;margin:28px auto 0}
+    .media-mentions .section-heading{max-width:1100px;margin-left:auto;margin-right:auto}.media-mentions .section-heading h2{font-size:clamp(2rem,3.3vw,3.25rem);line-height:1.25;text-wrap:balance}.media-mentions-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;max-width:1180px;margin:28px auto 0}
     .media-mention-card{display:flex;flex-direction:column;gap:10px;padding:24px;border:1px solid #dfe8f1;border-radius:16px;background:#fff;box-shadow:0 8px 24px rgba(23,62,100,.06)}
     .media-mention-card h3{margin:0;font-size:1.08rem;color:#173e64}
     .media-mention-card p{margin:0;color:#526477;line-height:1.7}
     .media-mention-card a{margin-top:auto;font-weight:700;color:#1663a7;text-underline-offset:3px}
-    .media-mentions-note{max-width:900px;margin:18px auto 0;color:#6b7b8b;font-size:.84rem;line-height:1.65;text-align:center}
-    @media(max-width:700px){.media-mentions-grid{grid-template-columns:1fr}.media-mention-card{padding:20px}.media-mentions-note{text-align:left}}
+    .media-mentions-note{max-width:1180px;margin:18px auto 0;color:#6b7b8b;font-size:.84rem;line-height:1.65;text-align:center}
+    @media(max-width:980px){.media-mentions-grid{grid-template-columns:1fr 1fr}.media-mentions .section-heading h2{font-size:clamp(1.9rem,4vw,2.7rem)}}
+    @media(max-width:700px){.media-mentions-grid{grid-template-columns:1fr}.media-mention-card{padding:20px}.media-mentions-note{text-align:left}.media-mentions .section-heading h2{font-size:clamp(1.75rem,7vw,2.25rem)}}
   </style>
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-KSR4VTW3Y4"></script>
@@ -416,6 +417,11 @@
           <h3>北海道庁「北海道スマート農業推進協議体」</h3>
           <p>北海道庁ホームページ内の「北海道スマート農業推進協議体」による「スマート農業関連製品・サービス」に、スマート畜産「関口農場の『繁殖Farm Pro』」として掲載されています。</p>
           <a href="https://www.pref.hokkaido.lg.jp/ns/gjf/135050.html" target="_blank" rel="noopener noreferrer">北海道庁の掲載ページを見る <span aria-hidden="true">›</span></a>
+        </article>
+        <article class="media-mention-card">
+          <h3>農材ドットコム</h3>
+          <p>「スマート農業関連製品・サービス取り扱いメーカー・代理店」に、FarmPro（繁殖Farm Pro）が掲載されています。</p>
+          <a href="https://www.nouzai.com/agri-shizai/smart-farming" target="_blank" rel="noopener noreferrer">農材ドットコムの掲載ページを見る <span aria-hidden="true">›</span></a>
         </article>
       </div>
       <p class="media-mentions-note">※各掲載先による推奨・認定を意味するものではありません。掲載内容は各サイトでご確認ください。</p>
