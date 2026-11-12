@@ -78,6 +78,22 @@
     .analysis-screen-card figcaption strong{font-size:1.1rem;color:#173e64}
     .analysis-screen-card figcaption span{font-size:.9rem;color:#6b7b8b;line-height:1.6}
     .analysis-screen-card img{display:block;width:100%;height:auto;border-radius:10px;border:1px solid #e3ebf3}
+    .analysis-preview{border:1px solid #e3ebf3;border-radius:10px;background:#f7f9fc;padding:16px;min-height:260px;overflow:hidden}
+    .analysis-preview-top{display:flex;gap:18px;justify-content:center;padding:8px 0 14px;border-bottom:2px solid #1c74d9;font-size:.78rem;font-weight:700;color:#42566a}
+    .analysis-preview-top .active{color:#1268c4}
+    .analysis-preview-alert{margin:14px 0;padding:10px 12px;border-radius:8px;background:#fff3df;color:#815115;font-size:.72rem}
+    .analysis-preview-title{font-size:1rem;font-weight:800;color:#172433;margin:10px 0}
+    .analysis-preview-controls{display:grid;grid-template-columns:1.5fr .75fr .75fr;gap:8px;margin-bottom:12px}
+    .analysis-preview-control{background:#fff;border:1px solid #ccd6e0;border-radius:8px;padding:9px 10px;font-size:.72rem;color:#43576a}
+    .analysis-preview-metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .analysis-preview-metric{background:#fff;border:1px solid #dce4ec;border-radius:8px;padding:10px;min-height:88px}
+    .analysis-preview-metric span{display:block;font-size:.66rem;color:#6b7b8b;margin-bottom:8px}
+    .analysis-preview-metric strong{font-size:1rem;color:#172433}
+    .analysis-preview-table{background:#fff;border:1px solid #dce4ec;border-radius:8px;overflow:hidden}
+    .analysis-preview-row{display:grid;grid-template-columns:.9fr 1.2fr 1.45fr 1.25fr 1.7fr;border-top:1px solid #e7edf3}
+    .analysis-preview-row:first-child{border-top:0;background:#f8fafc;font-weight:700}
+    .analysis-preview-row span{padding:9px 8px;font-size:.62rem;color:#26394a;line-height:1.35}
+    .analysis-preview-row strong{font-size:.68rem}
     .analysis-screen-note{margin:16px auto 0;color:#6b7b8b;font-size:.84rem;line-height:1.7;text-align:center}
     @media(max-width:820px){.analysis-screenshot-grid{grid-template-columns:1fr}.analysis-screen-card{padding:14px}.analysis-screen-note{text-align:left}}
   </style>
@@ -335,17 +351,35 @@
             <strong>農場全体の繁殖成績</strong>
             <span>平均分娩間隔、分娩後初回の授精・移植、空胎日数、受胎状況などを確認できます。</span>
           </figcaption>
-          <img src="farmpro-analysis-farm.png" alt="FarmPro分析画面。農場全体の繁殖成績として平均分娩間隔、分娩後初回の授精・移植、空胎日数、受胎状況を表示" loading="lazy" />
+          <div class="analysis-preview" role="img" aria-label="FarmProの農場全体の繁殖成績画面の表示例">
+            <div class="analysis-preview-top"><span>農場全体</span><span class="active">繁殖成績</span><span>産子・販売成績</span></div>
+            <div class="analysis-preview-alert">△ 照合できない記録や集計から除外した記録がある場合は確認できます。</div>
+            <div class="analysis-preview-title">母牛の繁殖成績</div>
+            <div class="analysis-preview-controls"><div class="analysis-preview-control">母牛を検索</div><div class="analysis-preview-control">2026年</div><div class="analysis-preview-control">耳標番号順</div></div>
+            <div class="analysis-preview-metrics">
+              <div class="analysis-preview-metric"><span>平均分娩間隔</span><strong>526.8日</strong></div>
+              <div class="analysis-preview-metric"><span>分娩後初回の授精・移植</span><strong>104日</strong></div>
+              <div class="analysis-preview-metric"><span>空胎日数</span><strong>113.8日</strong></div>
+              <div class="analysis-preview-metric"><span>受胎率</span><strong>要確認</strong></div>
+            </div>
+          </div>
         </figure>
         <figure class="analysis-screen-card">
           <figcaption>
             <strong>母牛ごとの繁殖成績比較</strong>
             <span>母牛ごとに分娩実績、分娩後の日数、受胎率、発情発見率・妊娠率の参考値を一覧で比較できます。</span>
           </figcaption>
-          <img src="farmpro-analysis-cows.png" alt="FarmPro分析画面。母牛ごとの分娩実績、分娩後の日数、受胎率、発情発見率・妊娠率を一覧表示" loading="lazy" />
+          <div class="analysis-preview" role="img" aria-label="FarmProの母牛ごとの繁殖成績比較画面の表示例">
+            <div class="analysis-preview-table">
+              <div class="analysis-preview-row"><span>母牛</span><span>分娩実績</span><span>分娩後の日数</span><span>受胎率</span><span>授精・移植時の農場成績</span></div>
+              <div class="analysis-preview-row"><span><strong>おと</strong><br>耳標 0254</span><span>平均間隔 848日<br>分娩 1回</span><span>初回授精・移植 58日<br>空胎日数 要確認</span><span>人工授精 要確認</span><span>発情発見率・妊娠率の参考値を表示</span></div>
+              <div class="analysis-preview-row"><span><strong>なおこ</strong><br>耳標 0476</span><span>平均間隔 792日<br>分娩 1回</span><span>記録不足・要確認</span><span>ET 100%</span><span>発情発見率 9.1%<br>妊娠率 9.1%</span></div>
+              <div class="analysis-preview-row"><span><strong>やすこ</strong><br>耳標 1842</span><span>記録不足・要確認</span><span>記録不足・要確認</span><span>人工授精 100%</span><span>発情発見率 28.6%<br>妊娠率 28.6%</span></div>
+            </div>
+          </div>
         </figure>
       </div>
-      <p class="analysis-screen-note">実際のFarmPro分析画面です。表示内容は登録されている記録や集計条件によって変わります。</p>
+      <p class="analysis-screen-note">FarmPro分析画面の表示例です。表示内容は登録されている記録や集計条件によって変わります。</p>
       <p class="analysis-context-note">集計する年を選び、最新の記録で再集計できます。繁殖成績からは売上・経費・利益の分析にも移動でき、現場の記録を経営の振り返りにつなげられます。</p>
       <div class="analysis-next">
         <p><strong>いつもの記録が、次の判断の材料に。</strong><br>まずは見本の牛で、FarmProの記録・確認の流れを試してみてください。</p>
