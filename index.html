@@ -117,6 +117,20 @@
     gtag('js', new Date());
     gtag('config', 'G-KSR4VTW3Y4');
   </script>
+  <style id="farmpro-operation-videos-styles">
+    .farmpro-video-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px}
+    .farmpro-video-card{min-width:0;background:#fff;border:1px solid #dbe5ef;border-radius:16px;padding:22px;box-shadow:0 6px 20px rgba(24,66,105,.05);display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+    .farmpro-video-number{font-size:.84rem;font-weight:800;color:#1763aa}
+    .farmpro-video-card h3{font-size:1.1rem;line-height:1.5;margin:0;color:#183b5b}
+    .farmpro-video-card p{font-size:.93rem;line-height:1.7;margin:0;color:#4e6070;flex:1}
+    .farmpro-video-player{width:min(100%,210px);aspect-ratio:9/16;align-self:center;overflow:hidden;border-radius:12px;background:#0c1d32}
+    .farmpro-video-player iframe{display:block;width:100%;height:100%;border:0}
+    .farmpro-video-watch{display:inline-flex;align-items:center;gap:4px;color:#1466b5;font-weight:800;font-size:.92rem;text-underline-offset:3px;margin-top:4px}
+    .farmpro-video-watch:hover{text-decoration:underline}
+    .farmpro-video-note{font-size:.84rem;color:#5c6f80;margin:18px 0 0;line-height:1.65}
+    @media(max-width:1000px){.farmpro-video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:600px){.farmpro-video-grid{grid-template-columns:1fr}.farmpro-video-card{padding:20px}}
+  </style>
 </head>
 <body>
 <header class="site-header">
@@ -128,6 +142,7 @@
       <a href="#workflow">繁殖管理</a>
       <a href="#analysis">分析</a>
       <a href="demo.html">操作体験</a>
+      <a href="#videos">操作動画</a>
       <a href="#pricing">料金</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -386,6 +401,47 @@
         <a class="btn btn-primary" href="demo.html">登録せずに操作を体験する <span aria-hidden="true">›</span></a>
         <small>操作体験では予定・牛の履歴・販売と経費を試せます。分析の操作はアプリ内でご確認ください。</small>
       </div>
+    </div>
+  </section>
+
+  <section class="section section-soft" id="videos" aria-labelledby="videos-title">
+    <div class="container">
+      <div class="section-heading">
+        <span class="eyebrow">実際の操作を動画で見る</span>
+        <h2 id="videos-title">1分でわかる、繁殖Farm Proの使い方。</h2>
+        <p class="section-intro">スマホでの記録から、AIによる入力補助、経費や繁殖成績の確認まで。実際の操作画面を短い動画で紹介します。</p>
+      </div>
+      <div class="farmpro-video-grid">
+        <article class="farmpro-video-card">
+          <span class="farmpro-video-number">01｜はじめての記録</span>
+          <h3>紙の牛台帳をスマホへ</h3>
+          <p>牛の情報をスマホにまとめて、個体の履歴を確認する流れを紹介します。</p>
+          <div class="farmpro-video-player"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/ecuoz-iw-dE" title="紙の牛台帳をスマホへのYouTube Shorts" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <a class="farmpro-video-watch" href="https://youtube.com/shorts/ecuoz-iw-dE" target="_blank" rel="noopener noreferrer">YouTube Shortsで見る <span aria-hidden="true">›</span></a>
+        </article>
+        <article class="farmpro-video-card">
+          <span class="farmpro-video-number">02｜AIで入力補助</span>
+          <h3>販売精算書から売上・経費を記録</h3>
+          <p>精算書を読み取り、確認した内容を売上・控除・経費につなげる操作を紹介します。</p>
+          <div class="farmpro-video-player"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/ZJCfkaQ7V0g" title="販売精算書から売上・経費を記録のYouTube Shorts" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <a class="farmpro-video-watch" href="https://youtube.com/shorts/ZJCfkaQ7V0g" target="_blank" rel="noopener noreferrer">YouTube Shortsで見る <span aria-hidden="true">›</span></a>
+        </article>
+        <article class="farmpro-video-card">
+          <span class="farmpro-video-number">03｜飼料在庫・経費</span>
+          <h3>納品書から入庫・出庫・収支まで</h3>
+          <p>飼料の購入と使用、子牛ごとの原価、月別収支を一つの流れで確認します。</p>
+          <div class="farmpro-video-player"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/_bjVmZGhR2I" title="納品書から入庫・出庫・収支までのYouTube Shorts" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <a class="farmpro-video-watch" href="https://youtube.com/shorts/_bjVmZGhR2I" target="_blank" rel="noopener noreferrer">YouTube Shortsで見る <span aria-hidden="true">›</span></a>
+        </article>
+        <article class="farmpro-video-card">
+          <span class="farmpro-video-number">04｜分析</span>
+          <h3>母牛ごとの繁殖成績を見える化</h3>
+          <p>分娩間隔や受胎率、産子の販売価格を一覧表とグラフで比較します。</p>
+          <div class="farmpro-video-player"><iframe loading="lazy" src="https://www.youtube-nocookie.com/embed/q920FXWw4Aw" title="母牛ごとの繁殖成績を見える化のYouTube Shorts" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+          <a class="farmpro-video-watch" href="https://youtube.com/shorts/q920FXWw4Aw" target="_blank" rel="noopener noreferrer">YouTube Shortsで見る <span aria-hidden="true">›</span></a>
+        </article>
+      </div>
+      <p class="farmpro-video-note">※動画は架空の農場・取引データを用いた操作例です。正式な保存は利用者が内容を確認して行います。</p>
     </div>
   </section>
 
